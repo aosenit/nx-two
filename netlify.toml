@@ -1,0 +1,11 @@
+[build]
+  command = "nx build test-deploy"
+  publish = "dist/test-deploy"
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
